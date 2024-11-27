@@ -264,7 +264,7 @@ footer > ul > li > a:hover {
 
 /* Hide nav, learning and thesis for mobile */  
 #nav-mobile,
-.learning-whole,
+#learning-whole,
 #thesis-mobile {
     display: none;
 }
@@ -366,20 +366,15 @@ footer > ul > li > a:hover {
     background-color: #f3f5f5;  /* set background colour */
 }
 
-.fisma .fisma-section:first-child {
-    padding-top: 2rem;
-    background-color: #d8d8d8; /* set background colour */
-}
-
 .exhibit .exhibit-block {
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
     align-items: center; /* Centers content vertically */
-   border-bottom: 1px solid #e7e7e7;
-   padding: 1rem 0rem 1rem 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 1rem 0rem 1rem 1rem;
 }
 
-.fisma > .fisma-section > .exhibit-img-desktop {
+.exhibit > .exhibit-block > .exhibit-img-desktop {
     width: 100%;
     height: auto;
 }
@@ -389,6 +384,12 @@ footer > ul > li > a:hover {
     height: 100%;
     align-content: center; /* Centers content vertically */
 }
+
+.exhibit > .exhibit-block:first-child {
+    padding-top: 2rem;
+    background-color: #d8d8d8; /* set background colour */
+}
+
 
 .exhibit > .exhibit-block > .exhibit-text h3 {
     font-size: large;
@@ -418,6 +419,7 @@ footer > ul > li > a:hover {
   .thesis-text,
   .exhibit,
   .learning-card,
+  .start-learning,
   .thesis-header h1 {
     display: none;
     }
@@ -495,9 +497,10 @@ footer > ul > li > a:hover {
     }
 
 /* Start Learning section for mobile */
-    .learning-whole {
-        display: flex;
-        flex-direction: column;
+    #learning-whole {
+        display: grid;
+        grid-column: full-start/full-end;
+        /* flex-direction: column; */
         background-color: #eaebec;
     }
         
@@ -505,7 +508,6 @@ footer > ul > li > a:hover {
       background-color: #d8d8d8;
       border: 0.5rem solid #eaebec;
       color: #4a4a4a;
-      width: 300%;
       padding: 1rem 0rem 1.5rem 1rem;
     }
 
